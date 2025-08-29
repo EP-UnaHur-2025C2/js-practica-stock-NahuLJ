@@ -2,13 +2,13 @@ const validaciones = [
   {
     nombre: "stock",
     funcion: (product, value) => {
-      return product.stock > value;
+      return product.stock <= value.max && product.stock >= value.min;
     }
   },
   {
     nombre: "precio",
     funcion: (product, value) => {
-      return product.precio <= value;
+      return product.precio <= value.max && product.precio >= value.min;
     }
   },
   {

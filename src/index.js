@@ -22,11 +22,26 @@ console.log(getValidacion(  {
     "values": 10
   }))
 
-  console.log(getValidacion(  {
+console.log(getValidacion(  {
     "fn": "categoria",
     "values": ["electrodomestico", "deportivo"]
   }))
 */
+
+console.log(filtrar([
+  {
+    "fn": "stock",
+    "values": {"min": 1, "max": 10}
+  },
+  {
+    "fn": "categoria",
+    "values": ["electrodomestico", "deportivo"]
+  },
+  {
+  "fn": "precio",
+  "values": { "min": 100, "max": 50000 }
+  }
+]))
 
 app.post("/productos/filtrar", (req, res) => {
   const data = req.body;
